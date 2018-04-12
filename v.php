@@ -12,7 +12,8 @@ if (empty($list)){
 
 
 require_once "jssdk.php";
-$jssdk = new JSSDK("wx094850350e88cca9", "3ac73d8151e3beefd09310ae281f480a");
+//$jssdk = new JSSDK("wx094850350e88cca9", "3ac73d8151e3beefd09310ae281f480a");
+$jssdk = new JSSDK("wx55126d00d406a5e1", "65bb1c665637f1b36160e2581c706757");
 $signPackage = $jssdk->GetSignPackage();
 
 $imagespath = $list['img'];
