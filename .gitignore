@@ -1,0 +1,12 @@
+.buildpath
+.project
+.settings
+/cache/*.html
+/cache/*.jpg
+/cache/*.png
+
+/参考
+/imgback
+*.zip
+*.rar
+
