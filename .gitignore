@@ -3,4 +3,5 @@
 .settings
 /参考
 /imgback
-
+.idea/
+*.iml

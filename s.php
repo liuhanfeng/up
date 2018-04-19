@@ -15,7 +15,7 @@ if (empty($list)){
 
 
 require_once "jssdk.php";
-$jssdk = new JSSDK("wx094850350e88cca9", "3ac73d8151e3beefd09310ae281f480a");
+$jssdk = new JSSDK($config['wx']['appId'], $config['wx']['appSecret']);
 $signPackage = $jssdk->GetSignPackage();
 
 $imagespath = $list['img'];

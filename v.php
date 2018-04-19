@@ -12,7 +12,7 @@ if (empty($list)){
 
 
 require_once "jssdk.php";
-$jssdk = new JSSDK("wx094850350e88cca9", "3ac73d8151e3beefd09310ae281f480a");
+$jssdk = new JSSDK($config['wx']['appId'], $config['wx']['appSecret']);
 $signPackage = $jssdk->GetSignPackage();
 
 $imagespath = $list['img'];
@@ -56,7 +56,7 @@ img {
 <body>
 	<div class="conddtent">
 		<div class="cdddd">
-			<?php echo rn2br($list['ma']) ?><img src="http://axmall.xdesc.com/1.png" style="display:none;"/>
+			<?php echo rn2br($list['ma']) ?><img src="<?php echo $config['sys']['siteurl'] ?>/1.png" style="display:none;"/>
 		</div>
 	</div>
 </body>
