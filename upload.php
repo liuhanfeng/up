@@ -14,7 +14,7 @@ $id = intval($_POST['imgid']);
 $id && $log->info("处理图像编号:".$id);
 $item = array();
 $fname = md5(time() . rand());
-$fname = time() . rand();
+$fname =gmdate("Ymd_His", 28800 +  time()) .'_'. rand();
 
 if ($id > 0) {
     $item = $db->get_row('select * from ls_imgs WHERE id=' . $id, ARRAY_A);

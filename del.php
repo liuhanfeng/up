@@ -8,6 +8,11 @@ $list = $db->get_row('select * from ls_imgs WHERE id=' . $id, ARRAY_A);
 if (empty($list)) {
     $tipMsg = '请求地址不存在!';
 } else {
+
+    @unlink('cache/' . $list['imgname'] . '.jpg_lay.jpg');
+    @unlink('cache/' . $list['imgname'] . '.jpg_lay.jpg.jpg');
+    @unlink('cache/' . $list['imgname'] . '_show.jpg');
+    @unlink('cache/' . $list['imgname'] . '_min.jpg');
     @unlink($list['img']);
     $db->query('DELETE FROM ls_imgs WHERE `id`=' . $id);
     header('Location: /list.php?i=' . $id);

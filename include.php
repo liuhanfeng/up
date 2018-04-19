@@ -1,13 +1,17 @@
 <?php
 session_start();
 error_reporting(E_ALL & ~(E_STRICT | E_NOTICE));
-include_once 'config.php';
+
+
+define('ROOT_DIR',__DIR__.'/');
+
+include_once ROOT_DIR.'config.php';
 
 // Include ezSQL core
-include_once "include/sql_core.php";
+include_once ROOT_DIR."include/sql_core.php";
 
 // Include ezSQL database specific component
-include_once "include/sql_mysql.php";
+include_once ROOT_DIR."include/sql_mysql.php";
 
 $db = new ezSQL_mysql($config['db']['user'], $config['db']['password'], $config['db']['name'], $config['db']['host']);
 $current_time = $db->get_var("SELECT " . $db->sysdate());
